@@ -41,6 +41,4 @@ async function processFolder(folderPath) {
 }
 
 // Call the processFolder function to start processing the folder
-console.log(__dirname)
 processFolder(__dirname + '/folder-will-convert-to-webp');
-// processFolder('/Users/mac/Documents/Kitemetric/fantasy-world/asset-dev/fantasy-world-public-asset-dev/assets/slime/thumbnail');
