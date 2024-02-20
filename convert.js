@@ -6,10 +6,11 @@ const CWEBP_PATH = `${__dirname}/cwebpm1`;
 
 async function convertToWebp(file, filePath, outputFilePath) {
     return new Promise((resolve, reject) => {
-        exec(`${CWEBP_PATH} ${filePath} -o ${outputFilePath}`, (err, stdout, stderr) => {
+        exec(`${CWEBP_PATH} ${filePath} -o ${outputFilePath} -q 90`, (err, stdout, stderr) => {
             if (err) {
                 console.error(err);
                 reject(err);
+                return;
             }
             console.log(`Converted ${file} to WebP format`);
             // Remove original image file
